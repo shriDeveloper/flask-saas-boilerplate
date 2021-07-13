@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Markt - Register Free
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container mt-5 text-center">
+  <div class="row">
+    <div class="col-md-12 text-center">
+    <h1>Register</h1>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <!-- Form goes here -->
+      <form method="POST">
+
+
+        {{ register_form.hidden_tag() }}
+
+        <div class="form-group">
+          {{ register_form.username(class='form-control' , placeholder='Enter UserName') }}
+        </div>
+
+         <div class="form-group">
+          {{ register_form.email(class='form-control' , placeholder='Enter Email') }}
+        </div>
+
+
+        <div class="form-group">
+          {{ register_form.password_1(class='form-control' , placeholder='Enter Password') }}
+        </div>
+
+        <div class="form-group">
+          {{ register_form.password_2(class='form-control' , placeholder='Confirm Password') }}
+        </div>
+
+        <div class="form-group">
+          {{ register_form.submit(class='btn-primary btn-lg btn-block' , value='register') }}
+        </div>
+
+
+         <!-- {{ register_form.username.label() }} -->
+          
+      </form>
+     
+      <!-- ends here -->
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
